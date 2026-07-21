@@ -3,12 +3,11 @@
 A 3D isometric cyberpunk boss fight where the boss learns how you play.
 
 Built with Unity 3D (URP) and Unity ML-Agents, CyberBoss pits you against a single
-boss in a neon-lit arena. As the fight progresses the boss tracks your behavior —
-how aggressively you engage, which skills you lean on, where you position yourself —
+boss in a neon-lit arena. As the fight progresses the boss tracks your behavior (how aggressively you engage, which skills you lean on, where you position yourself)
 and feeds that live stat vector into a trained reinforcement-learning policy. The
 longer you fight, the better it reads you.
 
-**WebGL playable in the browser** — no install required.
+**WebGL playable in the browser** 
 
 ---
 
@@ -27,26 +26,6 @@ You have five skills mapped to keyboard shortcuts:
 The boss has four selectable skills — **Charge**, **Projectile Burst**, **AoE Slam**,
 and **Teleport Strike** — plus a reactive **Shield Phase** that fires when you attack,
 weighted by how often you use ranged moves and how aggressively you pressure it.
-
-Early in the fight the boss picks skills at random. As it accumulates data on your
-style, the trained RL policy takes over and begins exploiting your patterns.
-
----
-
-## Adaptive Boss — How It Works
-
-A 9-float behavior stat vector is computed live from your actions:
-
-- **Dodge direction bias** — do you always dash the same way?
-- **Skill usage frequencies** — how often each of your five skills fires per minute
-- **Aggression score** — blended from time spent in close range and normal attack rate
-- **Average engagement range** — how far you keep from the boss on average
-- **Positional bias** — do you hug the arena center or hug the walls?
-
-This vector is the observation input for a PPO policy trained with Unity ML-Agents.
-The policy maps it to one of four boss skills, selecting whichever is most likely to
-counter your current playstyle. At runtime the ONNX model is loaded via Unity Sentis
-and runs inference locally — no server required, fully WebGL compatible.
 
 ---
 
@@ -107,18 +86,3 @@ Export the resulting model to `Assets/ML/Models/BossBrain.onnx`, then run
 `CyberBoss/Setup RL Boss` in the Unity Editor to wire it in.
 
 ---
-
-## WebGL Build
-
-1. Switch platform to WebGL in Build Settings.
-2. Set **Compression Format** to Brotli.
-3. Build — the output folder can be deployed to any static host (GitHub Pages, itch.io).
-
-No compute shaders or async GPU readback are used. The Sentis inference pass runs
-on the CPU to stay within WebGL constraints.
-
----
-
-## License
-
-MIT — see `LICENSE` for details.
