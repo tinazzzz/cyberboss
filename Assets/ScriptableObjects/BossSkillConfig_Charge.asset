@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a712a66d42a404a82b4198d3233a66, type: 3}
+  m_Name: BossSkillConfig_Charge
+  m_EditorClassIdentifier: Assembly-CSharp::BossChargeConfig
+  _cooldown: 4
+  _chargeSpeed: 20
+  _maxRange: 8
+  _contactRadius: 1.5
+  _damage: 10
+  _windupDuration: 0.8
+  _chargeScaleMultiplier: 1.15
+  _impactProfile:
+    _enableShake: 1
+    _shakeForce: 0.42
+    _shakeDuration: 0.2
+    _shakeIsSnap: 1
+    _enableFreeze: 1
+    _freezeTimeScale: 0.05
+    _freezeRealSeconds: 0.1
+    _caWeight: 0.7
+    _isGlitchCa: 0
+    _fovPunchDelta: 0
+    _vfxColor: {r: 2.5, g: 0.6, b: 0, a: 1}
+    _vfxParticleCount: 26
+    _vfxMinSpeed: 6
+    _vfxMaxSpeed: 14
+    _vfxLifetime: 0.2
+    _vfxSize: 0.13

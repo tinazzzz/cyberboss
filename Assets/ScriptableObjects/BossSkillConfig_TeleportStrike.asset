@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2b21ac0ff705147a958241ffe86ee2, type: 3}
+  m_Name: BossSkillConfig_TeleportStrike
+  m_EditorClassIdentifier: Assembly-CSharp::BossTeleportStrikeConfig
+  _cooldown: 5
+  _teleportBehindOffset: 1.5
+  _strikeRadius: 2
+  _strikeDamage: 15
+  _strikeDelay: 0.4
+  _targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  _scalePulseMagnitude: 1.2
+  _scalePulseDuration: 0.15
+  _preTeleportWindup: 0.6
+  _predictiveLateralOffset: 2
+  _dodgeBiasConfidenceSamples: 4
+  _arrivalProfile:
+    _enableShake: 0
+    _shakeForce: 0
+    _shakeDuration: 0
+    _shakeIsSnap: 0
+    _enableFreeze: 0
+    _freezeTimeScale: 0
+    _freezeRealSeconds: 0
+    _caWeight: 0.3
+    _isGlitchCa: 1
+    _fovPunchDelta: 0
+    _vfxColor: {r: 1.5, g: 0.1, b: 2.2, a: 1}
+    _vfxParticleCount: 20
+    _vfxMinSpeed: 4
+    _vfxMaxSpeed: 10
+    _vfxLifetime: 0.2
+    _vfxSize: 0.12
+  _strikeProfile:
+    _enableShake: 0
+    _shakeForce: 0
+    _shakeDuration: 0.15
+    _shakeIsSnap: 1
+    _enableFreeze: 1
+    _freezeTimeScale: 0.04
+    _freezeRealSeconds: 0.06
+    _caWeight: 0.6
+    _isGlitchCa: 1
+    _fovPunchDelta: -1.4
+    _vfxColor: {r: 1.5, g: 0.1, b: 2.2, a: 1}
+    _vfxParticleCount: 24
+    _vfxMinSpeed: 5
+    _vfxMaxSpeed: 12
+    _vfxLifetime: 0.2
+    _vfxSize: 0.13

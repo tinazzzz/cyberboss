@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d642a49d65871043a6328feb84de60d, type: 3}
+  m_Name: BossSkillConfig_ProjectileBurst
+  m_EditorClassIdentifier: Assembly-CSharp::BossProjectileBurstConfig
+  _cooldown: 5
+  _projectileCount: 3
+  _spreadAngleDegrees: 30
+  _projectileSpeed: 14
+  _projectileRange: 22
+  _projectileDamage: 12
+  _windupDuration: 0.2
+  _impactProfile:
+    _enableShake: 1
+    _shakeForce: 0.2
+    _shakeDuration: 0.12
+    _shakeIsSnap: 1
+    _enableFreeze: 0
+    _freezeTimeScale: 0
+    _freezeRealSeconds: 0
+    _caWeight: 0.3
+    _isGlitchCa: 0
+    _fovPunchDelta: 0
+    _vfxColor: {r: 2.2, g: 0.2, b: 0.1, a: 1}
+    _vfxParticleCount: 14
+    _vfxMinSpeed: 3
+    _vfxMaxSpeed: 7
+    _vfxLifetime: 0.12
+    _vfxSize: 0.1

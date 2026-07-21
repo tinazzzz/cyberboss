@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f468619d0f8ca246af98ecde655f89d, type: 3}
+  m_Name: SkillConfig_BurstStrike
+  m_EditorClassIdentifier: Assembly-CSharp::BurstStrikeSkillConfig
+  _blastRadius: 3
+  _blastDamage: 80
+  _targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  _energyThreshold: 100
+  _energyOnNormalAttack: 5
+  _energyOnRangedBlast: 8
+  _energyOnDash: 1
+  _energyOnPerfectDodge: 20
+  _energyOnParry: 15
+  _energyOnTakeDamage: 10
+  _impactProfile:
+    _enableShake: 1
+    _shakeForce: 0.45
+    _shakeDuration: 0.22
+    _shakeIsSnap: 1
+    _enableFreeze: 1
+    _freezeTimeScale: 0.05
+    _freezeRealSeconds: 0.1
+    _caWeight: 0.65
+    _isGlitchCa: 0
+    _fovPunchDelta: 0
+    _vfxColor: {r: 2.5, g: 0.1, b: 1.0, a: 1}
+    _vfxParticleCount: 26
+    _vfxMinSpeed: 6
+    _vfxMaxSpeed: 13
+    _vfxLifetime: 0.22
+    _vfxSize: 0.14

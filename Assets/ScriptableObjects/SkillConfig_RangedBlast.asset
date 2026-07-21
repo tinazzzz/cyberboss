@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293a73a0e02f524478e7c3ac1c1c3355, type: 3}
+  m_Name: SkillConfig_RangedBlast
+  m_EditorClassIdentifier: Assembly-CSharp::RangedBlastSkillConfig
+  _projectileSpeed: 30
+  _projectileRange: 20
+  _projectileDamage: 15
+  _floorLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  _maxCharges: 3
+  _rechargeDuration: 4
+  _impactProfile:
+    _enableShake: 1
+    _shakeForce: 0.18
+    _shakeDuration: 0.15
+    _shakeIsSnap: 1
+    _enableFreeze: 0
+    _freezeTimeScale: 0
+    _freezeRealSeconds: 0
+    _caWeight: 0.15
+    _isGlitchCa: 0
+    _fovPunchDelta: 0
+    _vfxColor: {r: 2.5, g: 1.4, b: 0.2, a: 1}
+    _vfxParticleCount: 18
+    _vfxMinSpeed: 5
+    _vfxMaxSpeed: 10
+    _vfxLifetime: 0.18
+    _vfxSize: 0.09

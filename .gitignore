@@ -1,0 +1,99 @@
+# ── Unity generated ──────────────────────────────────────────────────────────
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Logs/
+UserSettings/
+MemoryCaptures/
+[Rr]ecordings/
+
+# ── Unity asset metadata (only needed alongside the asset) ───────────────────
+# (Keep .meta files — they're required by Unity)
+
+# ── Asset Store and package caches ───────────────────────────────────────────
+[Aa]ssets/[Aa]sset [Ss]tore*/
+[Aa]ssets/[Aa]sset[Ss]tore*/
+
+# ── Third-party Asset Store content (not redistributable) ────────────────────
+Assets/ExplosiveLLC/
+Assets/Mryotaisu/
+Assets/MyAssets/
+Assets/cyberpunk_building_1/
+Assets/TextMesh Pro/
+Assets/TutorialInfo/
+Assets/_Recovery/
+Assets/Readme.asset
+Assets/Readme.asset.meta
+
+# ── 3D model binaries (large; not suitable for Git LFS-free repos) ───────────
+Assets/Models/
+Assets/Models/**
+*.fbx
+*.FBX
+*.fbx.meta
+*.FBX.meta
+*.obj
+*.OBJ
+*.obj.meta
+*.OBJ.meta
+
+# ── Trained ONNX models (regenerate via training script) ─────────────────────
+Assets/ML/Models/
+Assets/ML/Models/**
+Assets/ML/ModelBackups/
+Assets/ML/ModelBackups/**
+
+# ── Python training environment (pip-installed packages and virtual env) ──────
+Assets/ML/Training/venv/
+Assets/ML/Training/__pycache__/
+Assets/ML/Training/checkpoints/
+Assets/ML/Training/results/
+Assets/ML/Training/*.log
+Assets/ML/Training/*.pyc
+Assets/ML/Training/*.pyo
+
+# ── Internal AI agent instructions (not for public repo) ─────────────────────
+CLAUDE.md
+.claude/
+
+# ── Claude Code internal files ────────────────────────────────────────────────
+skills-lock.json
+references/
+
+# ── VS / Rider IDE ────────────────────────────────────────────────────────────
+.vs/
+.vscode/
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.unityproj
+ExportedObj/
+
+# ── JetBrains Rider ───────────────────────────────────────────────────────────
+.idea/
+*.sln.DotSettings.user
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX
+
+# ── Windows ───────────────────────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ── WebGL build output ────────────────────────────────────────────────────────
+WebGL/
+webgl-build/
+
+# ── Crash reports ─────────────────────────────────────────────────────────────
+crash.log
+sysinfo.txt

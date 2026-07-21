@@ -1,0 +1,70 @@
+# CyberBoss Boss Brain — ML-Agents PPO trainer configuration
+#
+# This file documents the hyperparameters used by the headless Python training
+# pipeline in cyberboss_env.py. It is also valid for mlagents-learn if you
+# choose to train via a Unity build instead (attach BossRLAgent as an Agent
+# subclass and re-run with "mlagents-learn cyberboss_config.yaml --run-id=...").
+#
+# Observation space : 9 floats  (BehaviorStatVector, see field-order table below)
+# Action space      : Discrete 5 (boss skills 0–4)
+#
+# BehaviorStatVector ONNX input layout — LOCKED, Part 9 reads by index:
+#   [0] DodgeDirectionBias       0=pure left, 0.5=neutral, 1=pure right
+#   [1] SkillUsageFrequency0     Dash uses/min ÷ 10
+#   [2] SkillUsageFrequency1     Parry uses/min ÷ 6
+#   [3] SkillUsageFrequency2     RangedBlast uses/min ÷ 8
+#   [4] SkillUsageFrequency3     BurstStrike uses/min ÷ 6
+#   [5] SkillUsageFrequency4     Barrier uses/min ÷ 4
+#   [6] AggressionScore          timeInCloseRange / elapsedTime
+#   [7] AverageEngagementRange   meanDistToBoss / maxArenaRange
+#   [8] PositionalBias           1 − (meanDistFromCenter / arenaRadius)
+#
+# Boss skill action mapping:
+#   0 = Charge            counters ranged/high-engagement-range play
+#   1 = ProjectileBurst   counters barrier/passive/center-hugging play
+#   2 = AoESlam           counters close-range aggression / burst-strike spam
+#   3 = ShieldPhase       counters parry-mashing
+#   4 = TeleportStrike    counters dash-heavy / predictable-dodge play
+
+default_settings:
+  trainer_type: ppo
+  hyperparameters:
+    batch_size: 512
+    buffer_size: 4096
+    learning_rate: 3.0e-4
+    beta: 2.0e-2        # entropy coefficient — raised from 5e-3 after training
+                        # showed premature convergence (policy collapsed to
+                        # near-total confidence on one action); see cyberboss_env.py
+    epsilon: 0.2
+    lambd: 0.95
+    num_epoch: 3
+  network_settings:
+    normalize: true     # ML-Agents obs normalisation flag (documents intent only for mlagents-learn path)
+                        # WARNING: the SB3 training path (cyberboss_env.py) does NOT use VecNormalize.
+                        # Observations are already in [0,1] — no extra normalisation layer is needed.
+                        # Do NOT wrap CyberBossEnv in VecNormalize; the ONNX export captures only
+                        # network weights, not VecNormalize running stats. Adding VecNormalize will
+                        # cause silent distribution shift at inference time.
+    hidden_units: 128
+    num_layers: 2
+    activation_function: tanh
+  reward_signals:
+    extrinsic:
+      gamma: 0.99
+      strength: 1.0
+  max_steps: 2000000
+  time_horizon: 64
+  summary_freq: 10000
+  checkpoint_interval: 200000
+  keep_checkpoints: 5
+
+behaviors:
+  BossBrain:
+    # Inherits all default_settings above.
+    # Override anything here for fast iteration runs.
+    #
+    # Example fast-test override (reduce for quick smoke tests):
+    # hyperparameters:
+    #   batch_size: 128
+    #   buffer_size: 1024
+    # max_steps: 200000

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2715bdfcb2bbb0442a5e5ac91d6383d6, type: 3}
+  m_Name: BossSkillConfig_AoeSlam
+  m_EditorClassIdentifier: Assembly-CSharp::BossAoESlamConfig
+  _cooldown: 9
+  _blastRadius: 4
+  _minEngagementRange: 6
+  _damage: 25
+  _targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  _windupDuration: 1
+  _slamImpactDelay: 0.3
+  _impactProfile:
+    _enableShake: 1
+    _shakeForce: 0.42
+    _shakeDuration: 0.65
+    _shakeIsSnap: 0
+    _enableFreeze: 1
+    _freezeTimeScale: 0.05
+    _freezeRealSeconds: 0.1
+    _caWeight: 0.7
+    _isGlitchCa: 0
+    _fovPunchDelta: 0
+    _vfxColor: {r: 2.2, g: 0.3, b: 0.05, a: 1}
+    _vfxParticleCount: 30
+    _vfxMinSpeed: 5
+    _vfxMaxSpeed: 12
+    _vfxLifetime: 0.25
+    _vfxSize: 0.16

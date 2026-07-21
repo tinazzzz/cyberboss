@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90149eea57d5b574c8f2aa27e5407dec, type: 3}
+  m_Name: CombatEffectsConfig
+  m_EditorClassIdentifier: Assembly-CSharp::CombatEffectsConfig
+  _lightCaWeight: 0.35
+  _mediumCaWeight: 0.5
+  _heavyCaWeight: 0.7
+  _bossDeathCaWeight: 1
+  _caWeightDecayRate: 2.5
+  _fovPunchDelta: -4
+  _fovPunchInDuration: 0.05
+  _fovSpringOutDuration: 0.2
+  _playerSparkCount: 20
+  _playerSparkColor: {r: 0, g: 2.5, b: 2.5, a: 1}
+  _playerSparkMinSpeed: 4
+  _playerSparkMaxSpeed: 10
+  _playerSparkLifetime: 0.25
+  _playerSparkSize: 0.08
+  _bossImpactCount: 30
+  _bossImpactColor: {r: 2.5, g: 0.5, b: 0, a: 1}
+  _bossImpactMinSpeed: 5
+  _bossImpactMaxSpeed: 12
+  _bossImpactLifetime: 0.2
+  _bossImpactSize: 0.12

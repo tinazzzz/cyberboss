@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980821bae69cf5642a757fe20f281c22, type: 3}
+  m_Name: SkillConfig_Barrier
+  m_EditorClassIdentifier: Assembly-CSharp::BarrierSkillConfig
+  _cooldown: 10
+  _barrierHealth: 20
+  _barrierDuration: 5
+  _absorbProfile:
+    _enableShake: 0
+    _shakeForce: 0
+    _shakeDuration: 0
+    _shakeIsSnap: 0
+    _enableFreeze: 0
+    _freezeTimeScale: 0
+    _freezeRealSeconds: 0
+    _caWeight: 0.2
+    _isGlitchCa: 0
+    _fovPunchDelta: 0
+    _vfxColor: {r: 0.1, g: 2.0, b: 2.2, a: 1}
+    _vfxParticleCount: 10
+    _vfxMinSpeed: 2
+    _vfxMaxSpeed: 5
+    _vfxLifetime: 0.15
+    _vfxSize: 0.06
+  _brokenProfile:
+    _enableShake: 1
+    _shakeForce: 0.2
+    _shakeDuration: 0.22
+    _shakeIsSnap: 1
+    _enableFreeze: 0
+    _freezeTimeScale: 0
+    _freezeRealSeconds: 0
+    _caWeight: 0
+    _isGlitchCa: 0
+    _fovPunchDelta: 0
+    _vfxColor: {r: 0.4, g: 2.4, b: 2.6, a: 1}
+    _vfxParticleCount: 28
+    _vfxMinSpeed: 4
+    _vfxMaxSpeed: 9
+    _vfxLifetime: 0.22
+    _vfxSize: 0.1
+  _expiredProfile:
+    _enableShake: 0
+    _shakeForce: 0
+    _shakeDuration: 0
+    _shakeIsSnap: 0
+    _enableFreeze: 0
+    _freezeTimeScale: 0
+    _freezeRealSeconds: 0
+    _caWeight: 0
+    _isGlitchCa: 0
+    _fovPunchDelta: 0
+    _vfxColor: {r: 0.1, g: 2.0, b: 2.2, a: 1}
+    _vfxParticleCount: 1
+    _vfxMinSpeed: 0
+    _vfxMaxSpeed: 0
+    _vfxLifetime: 0.3
+    _vfxSize: 0
