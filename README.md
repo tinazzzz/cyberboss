@@ -7,7 +7,7 @@ boss in a neon-lit arena. As the fight progresses the boss tracks your behavior 
 and feeds that live stat vector into a trained reinforcement-learning policy. The
 longer you fight, the better it reads you.
 
-**WebGL playable in the browser** 
+**WebGL playable in the browser**: https://tnazzzz.itch.io/cyberboss
 
 ---
 
